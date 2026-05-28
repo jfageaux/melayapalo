@@ -14,7 +14,7 @@ export default function WaitlistCTA() {
           first when the doors open.
         </p>
         <a
-          href="mailto:melayapalo@gmail.com?subject=Members Waitlist — Add Me&body=Hey Melaya, I'd love to be on the waitlist for the members area. Let me know when it launches!"
+          href="mailto:melayapalo@gmail.com?subject=Members%20Waitlist%20%E2%80%94%20Add%20Me&body=Hey%20Melaya%2C%20I%27d%20love%20to%20be%20on%20the%20waitlist%20for%20the%20members%20area.%20Let%20me%20know%20when%20it%20launches!"
           className="inline-block bg-bark text-cream text-sm font-medium tracking-widest uppercase px-12 py-5 hover:opacity-80 transition-opacity"
         >
           Join the Waitlist

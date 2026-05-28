@@ -32,7 +32,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="mailto:melayapalo@gmail.com?subject=Work with Melaya — Let's Get Started"
+              href="mailto:melayapalo@gmail.com?subject=Work%20with%20Melaya%20%E2%80%94%20Let%27s%20Get%20Started"
               className="inline-block bg-clay text-cream text-sm font-medium tracking-widest uppercase px-8 py-4 text-center transition-opacity hover:opacity-85"
             >
               Work with Melaya
