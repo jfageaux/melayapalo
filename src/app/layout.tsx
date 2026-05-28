@@ -19,13 +19,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Melaya Palo | Train with Resilience",
+  title: "Melaya Palo | Perform with Resilience",
   description:
-    "Fight camp conditioning, virtual nutrition coaching, and mindset training — built for women who show up. Train with Melaya Palo.",
+    "Personal training, fight camp programming, and virtual nutrition coaching with Melaya Palo. Built for athletes who want structure, intensity, and real results.",
   openGraph: {
-    title: "Melaya Palo | Train with Resilience",
+    title: "Melaya Palo | Perform with Resilience",
     description:
-      "Fight camp conditioning, virtual nutrition coaching, and mindset training — built for women who show up.",
+      "Fight camp programming, virtual nutrition coaching, and mindset training. Built for athletes who want structure, intensity, and real results.",
     type: "website",
   },
 };

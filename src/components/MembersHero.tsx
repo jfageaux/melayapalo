@@ -16,8 +16,8 @@ export default function MembersHero() {
 
         <p className="text-cream/60 text-xl leading-relaxed max-w-2xl mb-10">
           The members area is where the deep work lives — full fight camp programs, weekly
-          training videos, nutrition frameworks, mindset work, and a community of women
-          who take their training seriously.
+          training videos, nutrition frameworks, mindset work, and a community of athletes
+          who take their performance seriously.
         </p>
 
         <a

@@ -15,10 +15,10 @@ export default function FooterCTA() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <a
-              href="mailto:melayapalo@gmail.com?subject=Train with Melaya — Let's Talk"
+              href="mailto:melayapalo@gmail.com?subject=Work with Melaya — Let's Talk"
               className="inline-block bg-clay text-cream text-sm font-medium tracking-widest uppercase px-10 py-4 text-center hover:opacity-80 transition-opacity"
             >
-              Train with Melaya
+              Work with Melaya
             </a>
             <a
               href="mailto:melayapalo@gmail.com?subject=Book a Consult"

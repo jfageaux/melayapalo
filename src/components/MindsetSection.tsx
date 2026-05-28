@@ -34,8 +34,8 @@ export default function MindsetSection() {
             <em className="italic text-stone">of the Work</em>
           </h2>
           <p className="text-stone text-lg leading-relaxed">
-            Training is as much mental as it is physical. Members get access to
-            Melaya's mindset lesson series — grounded, honest, and built for real life.
+            Performance is as much mental as it is physical. Members get access to
+            Melaya's mindset lesson series — grounded, direct, and built for real performance.
           </p>
         </div>
 

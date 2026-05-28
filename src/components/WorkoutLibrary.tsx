@@ -108,7 +108,7 @@ export default function WorkoutLibrary() {
           <span className="text-clay text-2xl">🔒</span>
           <div>
             <p className="text-bark font-semibold text-sm">Full library unlocks with membership.</p>
-            <p className="text-stone text-sm">30+ videos and growing — fight camp sessions, skill work, recovery, and mindset.</p>
+            <p className="text-stone text-sm">30+ videos and growing — fight camp sessions, skill work, recovery, and performance mindset.</p>
           </div>
           <a
             href="mailto:melayapalo@gmail.com?subject=Members Waitlist — Add Me"

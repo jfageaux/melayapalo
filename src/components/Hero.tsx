@@ -23,19 +23,19 @@ export default function Hero() {
             Personal Training · Nutrition · Mindset
           </p>
           <h1 className="font-serif text-cream text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6">
-            Train with<br />
+            Perform with<br />
             <em className="not-italic text-clay">Resilience.</em>
           </h1>
           <p className="text-cream/80 text-lg sm:text-xl font-light leading-relaxed mb-10 max-w-md">
-            Fight camp conditioning, nutrition strategy, and mindset coaching —
-            built for women who show up.
+            Fight camp programming, nutrition strategy, and mindset coaching —
+            built for athletes who want structure and real results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="mailto:melayapalo@gmail.com?subject=Train with Melaya — Let's Get Started"
+              href="mailto:melayapalo@gmail.com?subject=Work with Melaya — Let's Get Started"
               className="inline-block bg-clay text-cream text-sm font-medium tracking-widest uppercase px-8 py-4 text-center transition-opacity hover:opacity-85"
             >
-              Train with Melaya
+              Work with Melaya
             </a>
             <a
               href="mailto:melayapalo@gmail.com?subject=Book a Consult"
