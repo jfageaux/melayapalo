@@ -9,7 +9,7 @@ export default function Hero() {
         alt="Melaya Palo training"
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-[65%_15%]"
         sizes="100vw"
       />
 
