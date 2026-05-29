@@ -16,29 +16,59 @@ export default function Hero() {
       </div>
 
       {/* Text — bottom on mobile, left column on desktop */}
-      <div className="order-2 lg:order-1 bg-bark flex flex-col justify-center px-8 sm:px-12 lg:px-16 py-14 lg:py-24">
-        <div className="max-w-md lg:ml-auto lg:pr-4">
-          <p className="text-clay text-sm font-medium tracking-widest uppercase mb-4">
+      <div className="order-2 lg:order-1 bg-void relative overflow-hidden flex flex-col justify-center px-8 sm:px-12 lg:px-16 py-16 lg:py-24">
+        {/* Oversized decorative text */}
+        <span
+          aria-hidden
+          className="absolute right-0 top-1/2 -translate-y-1/2 -rotate-90 font-display text-ash/[0.04] text-[7rem] font-bold tracking-[0.6em] uppercase select-none pointer-events-none whitespace-nowrap translate-x-[40%]"
+        >
+          RESILIENCE
+        </span>
+
+        <div className="max-w-md lg:ml-auto lg:pr-6 relative">
+          {/* Copper rule */}
+          <div
+            className="w-10 h-px bg-copper mb-8 animate-fade"
+            style={{ animationDelay: "0.05s" }}
+          />
+
+          <p
+            className="font-body text-copper text-xs tracking-[0.2em] uppercase mb-5 animate-rise"
+            style={{ animationDelay: "0.15s" }}
+          >
             Personal Training · Nutrition · Mindset
           </p>
-          <h1 className="font-serif text-cream text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6">
-            Perform with<br />
-            <em className="not-italic text-clay">Resilience.</em>
+
+          <h1
+            className="font-display text-ash text-6xl sm:text-7xl lg:text-[5.5rem] font-bold leading-[1.0] mb-7 animate-rise"
+            style={{ animationDelay: "0.25s" }}
+          >
+            Perform<br />
+            with<br />
+            <em className="italic text-copper">Resilience.</em>
           </h1>
-          <p className="text-cream/80 text-lg sm:text-xl font-light leading-relaxed mb-10">
+
+          <p
+            className="font-body text-ash/50 text-base sm:text-lg leading-relaxed mb-10 animate-rise"
+            style={{ animationDelay: "0.4s" }}
+          >
             Fight camp programming, nutrition strategy, and mindset coaching —
             built for athletes who want structure and real results.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+
+          <div
+            className="flex flex-col sm:flex-row gap-4 animate-rise"
+            style={{ animationDelay: "0.52s" }}
+          >
             <a
               href="mailto:melayapalo@gmail.com?subject=Work%20with%20Melaya%20%E2%80%94%20Let%27s%20Get%20Started"
-              className="inline-block bg-clay text-cream text-sm font-medium tracking-widest uppercase px-8 py-4 text-center transition-opacity hover:opacity-85"
+              className="inline-block bg-copper text-ash font-body text-xs tracking-[0.15em] uppercase px-8 py-4 text-center hover:bg-rust transition-colors"
             >
               Work with Melaya
             </a>
             <a
               href="mailto:melayapalo@gmail.com?subject=Book a Consult"
-              className="inline-block border border-cream/50 text-cream text-sm font-medium tracking-widest uppercase px-8 py-4 text-center transition-colors hover:bg-cream/10"
+              className="inline-block border border-ash/30 text-ash font-body text-xs tracking-[0.15em] uppercase px-8 py-4 text-center hover:border-ash/60 transition-colors"
             >
               Book a Consult
             </a>

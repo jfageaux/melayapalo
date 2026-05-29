@@ -7,39 +7,53 @@ const pillars = [
 
 export default function VirtualNutrition() {
   return (
-    <section className="bg-earth py-24 px-5">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section className="bg-void py-28 px-6 relative overflow-hidden">
+      {/* Atmospheric background word */}
+      <span
+        aria-hidden
+        className="absolute inset-0 flex items-center justify-center font-display font-bold text-ash/[0.03] select-none pointer-events-none leading-none uppercase"
+        style={{ fontSize: "clamp(8rem, 22vw, 22rem)" }}
+      >
+        FUEL
+      </span>
+
+      <div className="max-w-7xl mx-auto relative">
+        <div className="grid lg:grid-cols-2 gap-20 items-start">
           {/* Copy */}
           <div>
-            <p className="text-clay text-xs font-medium tracking-widest uppercase mb-4">
+            <div className="w-10 h-px bg-copper mb-8" />
+            <p className="font-body text-copper text-xs tracking-[0.2em] uppercase mb-5">
               Virtual Nutrition Coaching
             </p>
-            <h2 className="font-serif text-cream text-4xl sm:text-5xl font-bold leading-tight mb-6">
+            <h2 className="font-display text-ash text-5xl sm:text-6xl font-bold leading-tight mb-7">
               Food is<br />
-              <em className="italic text-clay">Strategy.</em>
+              <em className="italic text-copper">Strategy.</em>
             </h2>
-            <p className="text-cream/70 text-lg leading-relaxed mb-10">
-              You can't out-train a bad foundation. Melaya's virtual nutrition coaching
-              meets you where you are — whether you're a beginner learning the basics
+            <p className="font-body text-ash/50 text-lg leading-relaxed mb-10">
+              You can&apos;t out-train a bad foundation. Melaya&apos;s virtual nutrition coaching
+              meets you where you are — whether you&apos;re a beginner learning the basics
               or an athlete dialing in performance macros.
             </p>
             <a
               href="mailto:melayapalo@gmail.com?subject=Virtual Nutrition Coaching"
-              className="inline-block border border-clay text-clay text-sm font-medium tracking-widest uppercase px-8 py-4 hover:bg-clay hover:text-cream transition-colors"
+              className="inline-block border border-copper text-copper font-body text-xs tracking-[0.15em] uppercase px-8 py-4 hover:bg-copper hover:text-ash transition-colors"
             >
               Email Melaya
             </a>
           </div>
 
           {/* Pillars */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 gap-px bg-ash/8">
             {pillars.map((p) => (
-              <div key={p.label} className="bg-bark/60 p-6">
-                <h4 className="font-serif text-cream font-semibold text-lg mb-2">
+              <div
+                key={p.label}
+                className="bg-void p-7 group hover:bg-smoke transition-colors"
+              >
+                <div className="w-6 h-px bg-copper mb-5 group-hover:w-10 transition-all duration-300" />
+                <h4 className="font-display text-ash font-semibold text-xl mb-2 leading-snug">
                   {p.label}
                 </h4>
-                <p className="text-cream/60 text-sm leading-relaxed">{p.desc}</p>
+                <p className="font-body text-ash/40 text-sm leading-relaxed">{p.desc}</p>
               </div>
             ))}
           </div>

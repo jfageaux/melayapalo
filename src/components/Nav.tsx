@@ -9,40 +9,40 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-sand">
-      <nav className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-ash/95 backdrop-blur-sm border-b border-fog/60">
+      <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="font-serif text-lg font-semibold tracking-widest text-bark uppercase"
+          className="font-display text-void text-base tracking-[0.22em] uppercase font-medium"
         >
           Melaya Palo
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden sm:flex items-center gap-8">
+        <div className="hidden sm:flex items-center gap-10">
           <Link
             href="/"
-            className={`text-sm font-medium tracking-wide uppercase transition-colors ${
+            className={`font-body text-xs tracking-[0.15em] uppercase transition-colors ${
               pathname === "/"
-                ? "text-clay"
-                : "text-stone hover:text-bark"
+                ? "text-copper"
+                : "text-dust hover:text-void"
             }`}
           >
             Home
           </Link>
           <Link
             href="/members"
-            className={`text-sm font-medium tracking-wide uppercase transition-colors ${
+            className={`font-body text-xs tracking-[0.15em] uppercase transition-colors ${
               pathname === "/members"
-                ? "text-clay"
-                : "text-stone hover:text-bark"
+                ? "text-copper"
+                : "text-dust hover:text-void"
             }`}
           >
             Members
           </Link>
           <a
-            href="mailto:melayapalo@gmail.com"
-            className="text-sm font-medium tracking-wide uppercase bg-clay text-cream px-5 py-2 transition-opacity hover:opacity-80"
+            href="mailto:melayapalo@gmail.com?subject=Book a Consult"
+            className="font-body text-xs tracking-[0.15em] uppercase bg-void text-ash px-6 py-2.5 hover:bg-copper transition-colors"
           >
             Book a Consult
           </a>
@@ -54,33 +54,33 @@ export default function Nav() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-0.5 bg-bark transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-bark transition-all ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-bark transition-all ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          <span className={`block w-6 h-px bg-void transition-all ${menuOpen ? "rotate-45 translate-y-1.5" : ""}`} />
+          <span className={`block w-6 h-px bg-void transition-all ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-6 h-px bg-void transition-all ${menuOpen ? "-rotate-45 -translate-y-1.5" : ""}`} />
         </button>
       </nav>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="sm:hidden bg-cream border-t border-sand px-5 py-6 flex flex-col gap-5">
+        <div className="sm:hidden bg-ash border-t border-fog/60 px-6 py-8 flex flex-col gap-6">
           <Link
             href="/"
             onClick={() => setMenuOpen(false)}
-            className="text-sm font-medium tracking-widest uppercase text-bark"
+            className="font-body text-xs tracking-[0.15em] uppercase text-void"
           >
             Home
           </Link>
           <Link
             href="/members"
             onClick={() => setMenuOpen(false)}
-            className="text-sm font-medium tracking-widest uppercase text-bark"
+            className="font-body text-xs tracking-[0.15em] uppercase text-void"
           >
             Members
           </Link>
           <a
-            href="mailto:melayapalo@gmail.com"
+            href="mailto:melayapalo@gmail.com?subject=Book a Consult"
             onClick={() => setMenuOpen(false)}
-            className="text-sm font-medium tracking-widest uppercase bg-clay text-cream px-5 py-3 text-center"
+            className="font-body text-xs tracking-[0.15em] uppercase bg-void text-ash px-6 py-4 text-center"
           >
             Book a Consult
           </a>

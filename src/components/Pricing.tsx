@@ -1,41 +1,50 @@
 export default function Pricing() {
   return (
-    <section className="bg-sand py-24 px-5" id="pricing">
+    <section className="bg-fog py-28 px-6" id="pricing">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-clay text-xs font-medium tracking-widest uppercase mb-4">
+          <div className="w-10 h-px bg-copper mx-auto mb-8" />
+          <p className="font-body text-copper text-xs tracking-[0.2em] uppercase mb-5">
             Coaching
           </p>
-          <h2 className="font-serif text-bark text-4xl sm:text-5xl font-bold leading-tight mb-4">
-            One Package. Real Results.
+          <h2 className="font-display text-void text-5xl sm:text-6xl font-bold leading-tight mb-4">
+            One Package.<br />Real Results.
           </h2>
-          <p className="text-stone text-lg leading-relaxed">
+          <p className="font-body text-dust text-lg leading-relaxed">
             Everything you need to build momentum — nothing you don&apos;t.
           </p>
         </div>
 
-        <div className="bg-bark text-cream p-10 sm:p-14">
+        <div className="bg-void text-ash p-10 sm:p-14 relative overflow-hidden">
+          {/* Subtle corner decoration */}
+          <div className="absolute top-0 right-0 w-28 h-28 border-b border-l border-ash/5" />
+
           <div className="mb-8">
-            <h3 className="font-serif text-2xl font-semibold text-cream mb-2">
+            <div className="w-8 h-px bg-copper mb-6" />
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-dust mb-6">
               4-Week Coaching Package
-            </h3>
-            <p className="text-cream/60 text-sm mb-6">
+            </p>
+            <div className="flex items-end gap-3 mb-3">
+              <span className="font-display font-bold text-copper leading-none" style={{ fontSize: "clamp(4rem, 10vw, 6rem)" }}>
+                $300
+              </span>
+              <span className="font-body text-ash/30 text-sm mb-2">/ 4 weeks</span>
+            </div>
+            <p className="font-body text-ash/30 text-sm">
               A focused four weeks to reset, build, and move forward.
             </p>
-            <div className="flex items-end gap-2">
-              <span className="font-serif text-5xl font-bold text-clay">$300</span>
-              <span className="text-cream/50 text-sm mb-1">/ 4 weeks</span>
-            </div>
           </div>
 
-          <ul className="space-y-4 mb-10">
+          <div className="h-px bg-ash/10 mb-8" />
+
+          <ul className="space-y-5 mb-10">
             {[
               "4-week personalized training program",
               "An initial 50 minute meet & greet / assessment",
               "Weekly 30-minute video check-in & goal session",
             ].map((f) => (
-              <li key={f} className="flex items-start gap-3 text-sm leading-snug text-cream/80">
-                <span className="text-clay mt-0.5 shrink-0">—</span>
+              <li key={f} className="flex items-start gap-4 font-body text-sm text-ash/70 leading-snug">
+                <span className="text-copper shrink-0 mt-0.5">—</span>
                 {f}
               </li>
             ))}
@@ -43,15 +52,15 @@ export default function Pricing() {
 
           <a
             href={`mailto:melayapalo@gmail.com?subject=${encodeURIComponent("4-Week Package — I'm Ready")}`}
-            className="block text-center text-sm font-medium tracking-widest uppercase py-4 bg-clay text-cream transition-opacity hover:opacity-80"
+            className="block text-center font-body text-xs tracking-[0.15em] uppercase py-4 bg-copper text-ash hover:bg-rust transition-colors"
           >
             Get Started
           </a>
         </div>
 
-        <p className="text-center text-stone text-sm mt-8 opacity-70">
+        <p className="text-center font-body text-dust text-sm mt-8">
           Questions?{" "}
-          <a href="mailto:melayapalo@gmail.com" className="underline hover:text-bark">
+          <a href="mailto:melayapalo@gmail.com" className="text-copper hover:underline">
             Email Melaya
           </a>{" "}
           — she&apos;ll get back to you.

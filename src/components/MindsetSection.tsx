@@ -23,33 +23,48 @@ const lessons = [
 
 export default function MindsetSection() {
   return (
-    <section className="bg-cream py-24 px-5">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-clay text-xs font-medium tracking-widest uppercase mb-4">
+    <section className="bg-ash py-28 px-6 relative overflow-hidden">
+      {/* Atmospheric background text */}
+      <span
+        aria-hidden
+        className="absolute right-0 top-1/2 -translate-y-1/2 font-display font-bold text-fog/70 select-none pointer-events-none leading-none uppercase"
+        style={{ fontSize: "clamp(6rem, 18vw, 18rem)" }}
+      >
+        MIND
+      </span>
+
+      <div className="max-w-7xl mx-auto relative">
+        <div className="max-w-2xl mb-20">
+          <div className="w-10 h-px bg-copper mb-8" />
+          <p className="font-body text-copper text-xs tracking-[0.2em] uppercase mb-5">
             Mindset & Resilience
           </p>
-          <h2 className="font-serif text-bark text-4xl sm:text-5xl font-bold leading-tight mb-4">
+          <h2 className="font-display text-void text-5xl sm:text-6xl font-bold leading-tight mb-5">
             The Mental Side<br />
-            <em className="italic text-stone">of the Work</em>
+            <em className="italic text-dust">of the Work</em>
           </h2>
-          <p className="text-stone text-lg leading-relaxed">
+          <p className="font-body text-dust text-lg leading-relaxed">
             Performance is as much mental as it is physical. Members get access to
-            Melaya's mindset lesson series — grounded, direct, and built for real performance.
+            Melaya&apos;s mindset lesson series — grounded, direct, and built for real performance.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-8">
-          {lessons.map((l) => (
-            <div key={l.number} className="flex gap-6">
-              <span className="font-serif text-3xl font-bold text-sand shrink-0 leading-none pt-1">
+        <div className="grid sm:grid-cols-2 border-t border-void/10">
+          {lessons.map((l, i) => (
+            <div
+              key={l.number}
+              className={`flex gap-6 p-8 border-b border-void/10 hover:bg-fog/40 transition-colors ${
+                i % 2 === 0 ? "sm:border-r" : ""
+              }`}
+            >
+              <span className="font-display text-4xl font-bold text-fog leading-none shrink-0 pt-1">
                 {l.number}
               </span>
               <div>
-                <h3 className="font-serif text-bark text-lg font-semibold mb-2">
+                <h3 className="font-display text-void text-xl font-semibold mb-3 leading-snug">
                   {l.title}
                 </h3>
-                <p className="text-stone text-sm leading-relaxed">{l.desc}</p>
+                <p className="font-body text-dust text-sm leading-relaxed">{l.desc}</p>
               </div>
             </div>
           ))}

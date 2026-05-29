@@ -1,16 +1,29 @@
 @import "tailwindcss";
 
-@theme {
-  --color-cream: #FAF7F2;
-  --color-sand: #EDE4D8;
-  --color-taupe: #B5A898;
-  --color-clay: #C9A84C;
-  --color-stone: #8C7B6E;
-  --color-earth: #5A4A3D;
-  --color-bark: #3D2E26;
+@keyframes rise {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@theme {
+  --color-void: #130F0C;
+  --color-ash: #F5F0E8;
+  --color-fog: #DDD5C8;
+  --color-dust: #9E8E7E;
+  --color-copper: #C07038;
+  --color-rust: #7A3020;
+  --color-smoke: #2C2219;
+
+  --font-display: var(--font-cormorant), "Georgia", serif;
+  --font-body: var(--font-syne), system-ui, sans-serif;
+
+  --animate-rise: rise 0.8s ease both;
+  --animate-fade: fade 0.6s ease both;
 }
 
 html {
@@ -18,9 +31,9 @@ html {
 }
 
 body {
-  background-color: #FAF7F2;
-  color: #3D2E26;
-  font-family: var(--font-sans);
+  background-color: var(--color-ash);
+  color: var(--color-void);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
