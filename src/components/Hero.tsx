@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-svh flex items-start pb-16 pt-28 overflow-hidden">
+    <section className="relative min-h-svh flex items-end pb-16 pt-24 overflow-hidden">
       {/* Background photo */}
       <Image
         src="/hero-boxing.jpg"
@@ -14,7 +14,7 @@ export default function Hero() {
       />
 
       {/* Warm overlay — graduated from bottom */}
-      <div className="absolute inset-0 bg-gradient-to-b from-bark/85 via-bark/40 to-bark/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-bark/85 via-bark/40 to-bark/10" />
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-5 w-full">
