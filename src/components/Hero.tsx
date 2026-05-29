@@ -1,47 +1,23 @@
-"use client";
-
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 
 export default function Hero() {
-  const parallaxRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = parallaxRef.current;
-    if (!el) return;
-
-    const update = () => {
-      el.style.transform = `translateY(${-150 + window.scrollY * 0.2}px) scale(1.5)`;
-    };
-
-    update();
-    window.addEventListener("scroll", update, { passive: true });
-    return () => window.removeEventListener("scroll", update);
-  }, []);
-
   return (
-    <section className="relative min-h-svh flex items-end pb-16 pt-24 overflow-hidden">
-      {/* Background photo — scaled up so it has room to drift without showing edges */}
-      <div
-        ref={parallaxRef}
-        className="absolute inset-0 will-change-transform"
-      >
+    <section className="flex flex-col lg:grid lg:grid-cols-2 lg:min-h-svh">
+      {/* Photo — top on mobile, right column on desktop */}
+      <div className="relative order-1 lg:order-2 h-[55vh] lg:h-auto">
         <Image
           src="/hero-boxing.jpg"
           alt="Melaya Palo training"
           fill
           priority
-          className="object-cover object-top"
-          sizes="100vw"
+          className="object-cover object-[65%_15%]"
+          sizes="(max-width: 1024px) 100vw, 50vw"
         />
       </div>
 
-      {/* Warm overlay — graduated from bottom */}
-      <div className="absolute inset-0 bg-gradient-to-t from-bark/85 via-bark/40 to-bark/10" />
-
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-5 w-full">
-        <div className="max-w-xl">
+      {/* Text — bottom on mobile, left column on desktop */}
+      <div className="order-2 lg:order-1 bg-bark flex flex-col justify-center px-8 sm:px-12 lg:px-16 py-14 lg:py-24">
+        <div className="max-w-md lg:ml-auto lg:pr-4">
           <p className="text-clay text-sm font-medium tracking-widest uppercase mb-4">
             Personal Training · Nutrition · Mindset
           </p>
@@ -49,7 +25,7 @@ export default function Hero() {
             Perform with<br />
             <em className="not-italic text-clay">Resilience.</em>
           </h1>
-          <p className="text-cream/80 text-lg sm:text-xl font-light leading-relaxed mb-10 max-w-md">
+          <p className="text-cream/80 text-lg sm:text-xl font-light leading-relaxed mb-10">
             Fight camp programming, nutrition strategy, and mindset coaching —
             built for athletes who want structure and real results.
           </p>
@@ -68,11 +44,6 @@ export default function Hero() {
             </a>
           </div>
         </div>
-      </div>
-
-      {/* Scroll hint */}
-      <div className="absolute bottom-6 right-6 z-10 flex flex-col items-center gap-2 opacity-50">
-        <span className="text-cream text-xs tracking-widest uppercase rotate-90 origin-center">Scroll</span>
       </div>
     </section>
   );
