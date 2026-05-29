@@ -11,7 +11,7 @@ export default function Hero() {
     if (!el) return;
 
     const update = () => {
-      el.style.transform = `translateY(${-100 + window.scrollY * 0.2}px)`;
+      el.style.transform = `translateY(${-250 + window.scrollY * 0.2}px)`;
     };
 
     update();
@@ -31,7 +31,7 @@ export default function Hero() {
           alt="Melaya Palo training"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-top"
           sizes="100vw"
         />
       </div>
