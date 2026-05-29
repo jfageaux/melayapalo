@@ -18,7 +18,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-5 w-full">
-        <div className="max-w-xl">
+        <div className="max-w-xl ml-auto">
           <p className="text-clay text-sm font-medium tracking-widest uppercase mb-4">
             Personal Training · Nutrition · Mindset
           </p>
