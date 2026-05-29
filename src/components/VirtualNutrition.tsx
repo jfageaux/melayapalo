@@ -11,7 +11,7 @@ export default function VirtualNutrition() {
       {/* Atmospheric background word */}
       <span
         aria-hidden
-        className="parallax-drift absolute inset-0 flex items-center justify-center font-display font-bold text-ash/[0.03] select-none pointer-events-none leading-none uppercase"
+        className="absolute inset-0 flex items-center justify-center font-display font-bold text-ash/[0.03] select-none pointer-events-none leading-none uppercase"
         style={{ fontSize: "clamp(8rem, 22vw, 22rem)" }}
       >
         FUEL

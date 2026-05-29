@@ -27,7 +27,7 @@ export default function MindsetSection() {
       {/* Atmospheric background text */}
       <span
         aria-hidden
-        className="parallax-drift absolute right-0 top-1/2 -translate-y-1/2 font-display font-bold text-fog/70 select-none pointer-events-none leading-none uppercase"
+        className="absolute right-0 top-1/2 -translate-y-1/2 font-display font-bold text-fog/70 select-none pointer-events-none leading-none uppercase"
         style={{ fontSize: "clamp(6rem, 18vw, 18rem)" }}
       >
         MIND
