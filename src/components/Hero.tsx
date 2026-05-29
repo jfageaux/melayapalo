@@ -1,17 +1,39 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 export default function Hero() {
+  const parallaxRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = parallaxRef.current;
+    if (!el) return;
+
+    const onScroll = () => {
+      el.style.transform = `translateY(${window.scrollY * 0.2}px)`;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <section className="relative min-h-svh flex items-end pb-16 pt-24 overflow-hidden">
-      {/* Background photo */}
-      <Image
-        src="/hero-boxing.jpg"
-        alt="Melaya Palo training"
-        fill
-        priority
-        className="object-cover object-center"
-        sizes="100vw"
-      />
+      {/* Background photo — scaled up so it has room to drift without showing edges */}
+      <div
+        ref={parallaxRef}
+        className="absolute inset-0 scale-[1.4] will-change-transform"
+      >
+        <Image
+          src="/hero-boxing.jpg"
+          alt="Melaya Palo training"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </div>
 
       {/* Warm overlay — graduated from bottom */}
       <div className="absolute inset-0 bg-gradient-to-t from-bark/85 via-bark/40 to-bark/10" />
