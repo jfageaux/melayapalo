@@ -4,7 +4,7 @@ export default function MembersHero() {
       {/* Atmospheric background text */}
       <span
         aria-hidden
-        className="absolute -right-8 bottom-0 font-display font-bold text-ash/[0.025] select-none pointer-events-none leading-none uppercase"
+        className="parallax-drift absolute -right-8 bottom-0 font-display font-bold text-ash/[0.025] select-none pointer-events-none leading-none uppercase"
         style={{ fontSize: "clamp(6rem, 20vw, 20rem)" }}
       >
         MEMBERS

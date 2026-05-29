@@ -4,7 +4,7 @@ export default function WaitlistCTA() {
       {/* Decorative background text */}
       <span
         aria-hidden
-        className="absolute right-0 bottom-0 font-display font-bold text-rust/25 select-none pointer-events-none leading-none uppercase"
+        className="parallax-drift absolute right-0 bottom-0 font-display font-bold text-rust/25 select-none pointer-events-none leading-none uppercase"
         style={{ fontSize: "clamp(6rem, 18vw, 18rem)" }}
       >
         FIRST.

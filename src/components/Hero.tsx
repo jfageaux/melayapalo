@@ -1,18 +1,57 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 export default function Hero() {
+  const imgWrapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = imgWrapRef.current;
+    if (!el) return;
+    let raf: number;
+
+    const tick = () => {
+      el.style.transform = `translateY(${window.scrollY * 0.18}px)`;
+    };
+
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(tick);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
   return (
     <section className="flex flex-col lg:grid lg:grid-cols-2 lg:min-h-svh">
       {/* Photo — top on mobile, right column on desktop */}
-      <div className="relative order-1 lg:order-2 h-[55vh] lg:h-auto">
-        <Image
-          src="/hero-boxing.jpg"
-          alt="Melaya Palo training"
-          fill
-          priority
-          className="object-cover object-[65%_15%]"
-          sizes="(max-width: 1024px) 100vw, 50vw"
-        />
+      <div className="relative order-1 lg:order-2 h-[55vh] lg:h-auto overflow-hidden">
+        {/* Extra height so edges stay hidden as the image translates down */}
+        <div
+          ref={imgWrapRef}
+          style={{
+            position: "absolute",
+            top: -200,
+            left: 0,
+            right: 0,
+            bottom: -200,
+            willChange: "transform",
+          }}
+        >
+          <Image
+            src="/hero-boxing.jpg"
+            alt="Melaya Palo training"
+            fill
+            priority
+            className="object-cover object-[65%_15%]"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+        </div>
       </div>
 
       {/* Text — bottom on mobile, left column on desktop */}
