@@ -31,7 +31,7 @@ export default function Pricing() {
           <ul className="space-y-4 mb-10">
             {[
               "4-week personalized training program",
-              "1 × 50-minute initial meet & greet / assessment",
+              "An initial 50 minute meet & greet / assessment",
               "Weekly 30-minute video check-in & goal session",
             ].map((f) => (
               <li key={f} className="flex items-start gap-3 text-sm leading-snug text-cream/80">
