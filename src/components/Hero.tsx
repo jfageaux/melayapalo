@@ -10,12 +10,13 @@ export default function Hero() {
     const el = parallaxRef.current;
     if (!el) return;
 
-    const onScroll = () => {
-      el.style.transform = `translateY(${window.scrollY * 0.2}px)`;
+    const update = () => {
+      el.style.transform = `translateY(${-100 + window.scrollY * 0.2}px)`;
     };
 
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
   }, []);
 
   return (
@@ -23,7 +24,7 @@ export default function Hero() {
       {/* Background photo — scaled up so it has room to drift without showing edges */}
       <div
         ref={parallaxRef}
-        className="absolute inset-0 scale-[1.4] will-change-transform"
+        className="absolute inset-0 scale-[1.5] will-change-transform"
       >
         <Image
           src="/hero-boxing.jpg"
