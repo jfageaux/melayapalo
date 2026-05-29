@@ -11,7 +11,7 @@ export default function Hero() {
     if (!el) return;
 
     const update = () => {
-      el.style.transform = `translateY(${-250 + window.scrollY * 0.2}px)`;
+      el.style.transform = `translateY(${-150 + window.scrollY * 0.2}px) scale(1.5)`;
     };
 
     update();
@@ -24,7 +24,7 @@ export default function Hero() {
       {/* Background photo — scaled up so it has room to drift without showing edges */}
       <div
         ref={parallaxRef}
-        className="absolute inset-0 scale-[1.5] will-change-transform"
+        className="absolute inset-0 will-change-transform"
       >
         <Image
           src="/hero-boxing.jpg"
