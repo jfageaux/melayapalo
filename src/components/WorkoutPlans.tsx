@@ -25,7 +25,7 @@ export default function WorkoutPlans() {
           <p className="font-body text-copper text-xs tracking-[0.2em] uppercase mb-5">
             Fight Camp Programs
           </p>
-          <h2 className="font-display text-void text-5xl sm:text-6xl font-bold leading-tight mb-6">
+          <h2 className="font-display text-void text-5xl sm:text-6xl font-bold leading-[1.15] pb-1 mb-6">
             Programs Built for<br />
             <em className="italic text-dust">the Long Game</em>
           </h2>
