@@ -59,7 +59,7 @@ export default function WorkoutLibrary() {
             <p className="font-body text-copper text-xs tracking-[0.2em] uppercase mb-3">
               Members Only
             </p>
-            <h2 className="font-display text-void text-5xl font-bold leading-tight">
+            <h2 className="font-display text-void text-5xl font-bold leading-[1.15] pb-1">
               Workout Library
             </h2>
           </div>

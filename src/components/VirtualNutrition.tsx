@@ -25,7 +25,7 @@ export default function VirtualNutrition() {
             <p className="font-body text-copper text-xs tracking-[0.2em] uppercase mb-5">
               Virtual Nutrition Coaching
             </p>
-            <h2 className="font-display text-ash text-5xl sm:text-6xl font-bold leading-tight mb-7">
+            <h2 className="font-display text-ash text-5xl sm:text-6xl font-bold leading-[1.15] pb-1 mb-7">
               Food is<br />
               <em className="italic text-copper">Strategy.</em>
             </h2>

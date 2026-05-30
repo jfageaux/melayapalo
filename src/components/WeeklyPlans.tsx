@@ -38,7 +38,7 @@ export default function WeeklyPlans() {
           <p className="font-body text-copper text-xs tracking-[0.2em] uppercase mb-5">
             Structured Programming
           </p>
-          <h2 className="font-display text-ash text-5xl sm:text-6xl font-bold leading-tight mb-6">
+          <h2 className="font-display text-ash text-5xl sm:text-6xl font-bold leading-[1.15] pb-1 mb-6">
             Weekly Training Plans
           </h2>
           <p className="font-body text-ash/40 text-lg leading-relaxed">
