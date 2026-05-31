@@ -49,8 +49,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-rise" style={{ animationDelay: "0.52s" }}>
-            <Cta href="#booking">Book a Free Consultation</Cta>
-            <Cta variant="ghost" href={mailto("Work with Melaya — Let's Get Started")}>Work with Melaya</Cta>
+            <Cta href={mailto("Work with Melaya — Let's Get Started")}>Work with Melaya</Cta>
           </div>
         </div>
       </div>

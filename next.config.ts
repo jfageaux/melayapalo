@@ -18,10 +18,9 @@ const securityHeaders = [
       "default-src 'self'",
       "script-src 'self'",
       "style-src 'self' 'unsafe-inline'", // Next.js injects inline <style> for critical CSS
-      "img-src 'self' data: https://*.calendly.com",
+      "img-src 'self' data:",
       "font-src 'self'",
       "connect-src 'self'",
-      "frame-src https://calendly.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self' mailto:",
