@@ -17,7 +17,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="bg-void text-ash p-10 sm:p-14 relative overflow-hidden">
+        <div className="bg-void text-ash p-10 sm:p-14 relative">
           <div className="absolute top-0 right-0 w-28 h-28 border-b border-l border-ash/5" />
 
           <div className="mb-8">

@@ -3,14 +3,15 @@ import { mailto } from "@/lib/email";
 
 export default function MembersHero() {
   return (
-    <section className="bg-void pt-32 pb-24 px-6 relative overflow-hidden">
-      <span
-        aria-hidden
-        className="absolute -right-8 bottom-0 font-display font-bold text-ash/[0.025] select-none pointer-events-none leading-none uppercase"
-        style={{ fontSize: "clamp(6rem, 20vw, 20rem)" }}
-      >
-        MEMBERS
-      </span>
+    <section className="bg-void pt-32 pb-24 px-6 relative">
+      <div aria-hidden className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+        <span
+          className="absolute -right-8 bottom-0 font-display font-bold text-ash/[0.025] leading-none uppercase"
+          style={{ fontSize: "clamp(6rem, 20vw, 20rem)" }}
+        >
+          MEMBERS
+        </span>
+      </div>
 
       <div className="max-w-7xl mx-auto relative">
         <div className="inline-flex items-center gap-3 mb-10">

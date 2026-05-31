@@ -3,14 +3,15 @@ import { mailto } from "@/lib/email";
 
 export default function WaitlistCTA() {
   return (
-    <section className="bg-copper py-28 px-6 relative overflow-hidden">
-      <span
-        aria-hidden
-        className="absolute right-0 bottom-0 font-display font-bold text-rust/25 select-none pointer-events-none leading-none uppercase"
-        style={{ fontSize: "clamp(6rem, 18vw, 18rem)" }}
-      >
-        FIRST.
-      </span>
+    <section className="bg-copper py-28 px-6 relative">
+      <div aria-hidden className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+        <span
+          className="absolute right-0 bottom-0 font-display font-bold text-rust/25 leading-none uppercase"
+          style={{ fontSize: "clamp(6rem, 18vw, 18rem)" }}
+        >
+          FIRST.
+        </span>
+      </div>
 
       <div className="max-w-7xl mx-auto relative">
         <div className="max-w-3xl">

@@ -16,13 +16,12 @@ export default function Hero() {
         />
       </div>
 
-      <div className="order-2 lg:order-1 bg-void relative overflow-hidden flex flex-col justify-center px-8 sm:px-12 lg:px-16 py-16 lg:py-24">
-        <span
-          aria-hidden
-          className="absolute right-0 top-1/2 -translate-y-1/2 -rotate-90 font-display text-ash/[0.04] text-[7rem] font-bold tracking-[0.6em] uppercase select-none pointer-events-none whitespace-nowrap translate-x-[40%]"
-        >
-          RESILIENCE
-        </span>
+      <div className="order-2 lg:order-1 bg-void relative flex flex-col justify-center px-8 sm:px-12 lg:px-16 py-16 lg:py-24">
+        <div aria-hidden className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+          <span className="absolute right-0 top-1/2 -translate-y-1/2 -rotate-90 font-display text-ash/[0.04] text-[7rem] font-bold tracking-[0.6em] uppercase whitespace-nowrap translate-x-[40%]">
+            RESILIENCE
+          </span>
+        </div>
 
         <div className="max-w-md lg:ml-auto lg:pr-6 relative">
           <div className="w-10 h-px bg-copper mb-8 animate-fade" style={{ animationDelay: "0.05s" }} />

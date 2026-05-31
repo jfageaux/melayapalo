@@ -3,14 +3,15 @@ import { mindsetLessons } from "@/lib/content";
 
 export default function MindsetSection() {
   return (
-    <section className="bg-ash py-28 px-6 relative overflow-hidden">
-      <span
-        aria-hidden
-        className="absolute right-0 top-1/2 -translate-y-1/2 font-display font-bold text-fog/70 select-none pointer-events-none leading-none uppercase"
-        style={{ fontSize: "clamp(6rem, 18vw, 18rem)" }}
-      >
-        MIND
-      </span>
+    <section className="bg-ash py-28 px-6 relative">
+      <div aria-hidden className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+        <span
+          className="absolute right-0 top-1/2 -translate-y-1/2 font-display font-bold text-fog/70 leading-none uppercase"
+          style={{ fontSize: "clamp(6rem, 18vw, 18rem)" }}
+        >
+          MIND
+        </span>
+      </div>
 
       <div className="max-w-7xl mx-auto relative">
         <div className="max-w-2xl mb-20">
