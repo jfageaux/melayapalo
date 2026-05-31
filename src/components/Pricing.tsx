@@ -9,7 +9,7 @@ export default function Pricing() {
         <div className="text-center mb-16">
           <div className="w-10 h-px bg-copper mx-auto mb-8" />
           <p className="font-body text-copper text-xs tracking-[0.2em] uppercase mb-5">Coaching</p>
-          <h2 className="font-display text-void text-5xl sm:text-6xl font-bold leading-tight mb-4">
+          <h2 className="display-heading font-display text-void text-5xl sm:text-6xl font-bold mb-4">
             One Package.<br />Real Results.
           </h2>
           <p className="font-body text-dust text-lg leading-relaxed">

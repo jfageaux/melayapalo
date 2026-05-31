@@ -21,7 +21,7 @@ export default function MembersHero() {
 
         <div className="w-10 h-px bg-copper mb-8" />
 
-        <h1 className="font-display text-ash text-6xl sm:text-7xl lg:text-[5.5rem] font-bold leading-[1.0] pb-1 mb-7">
+        <h1 className="display-heading font-display text-ash text-6xl sm:text-7xl lg:text-[5.5rem] font-bold mb-7">
           Your Training,<br />
           <em className="italic text-copper">Your Terms.</em>
         </h1>

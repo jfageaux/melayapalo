@@ -16,7 +16,7 @@ export default function MindsetSection() {
       <div className="max-w-7xl mx-auto relative">
         <div className="max-w-2xl mb-20">
           <SectionPreamble eyebrow="Mindset & Resilience" />
-          <h2 className="font-display text-void text-5xl sm:text-6xl font-bold leading-tight mb-5">
+          <h2 className="display-heading font-display text-void text-5xl sm:text-6xl font-bold mb-5">
             The Mental Side<br />
             <em className="italic text-dust">of the Work</em>
           </h2>

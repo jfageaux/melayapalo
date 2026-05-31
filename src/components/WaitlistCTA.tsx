@@ -19,7 +19,7 @@ export default function WaitlistCTA() {
           <p className="font-body text-ash/60 text-xs tracking-[0.2em] uppercase mb-6">
             Members Area — Opening Soon
           </p>
-          <h2 className="font-display text-ash text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.0] pb-1 mb-7">
+          <h2 className="display-heading font-display text-ash text-5xl sm:text-6xl lg:text-7xl font-bold mb-7">
             Be First in the Door.
           </h2>
           <p className="font-body text-ash/70 text-xl leading-relaxed max-w-xl mb-10">

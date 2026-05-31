@@ -8,7 +8,7 @@ export default function MemberCheckIns() {
         <div className="grid lg:grid-cols-2 gap-20 items-start">
           <div>
             <SectionPreamble eyebrow="Accountability" />
-            <h2 className="font-display text-ash text-5xl sm:text-6xl font-bold leading-tight mb-7">
+            <h2 className="display-heading font-display text-ash text-5xl sm:text-6xl font-bold mb-7">
               Member<br />
               <em className="italic text-copper">Check-Ins</em>
             </h2>

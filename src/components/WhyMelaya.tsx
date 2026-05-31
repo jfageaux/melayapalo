@@ -7,7 +7,7 @@ export default function WhyMelaya() {
       <div className="max-w-4xl mx-auto">
         <div className="mb-16">
           <SectionPreamble eyebrow="Credentials" />
-          <h2 className="font-display text-ash text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05]">
+          <h2 className="display-heading font-display text-ash text-5xl sm:text-6xl lg:text-7xl font-bold">
             Why Train<br />
             with <em className="italic text-copper">Melaya</em>
           </h2>

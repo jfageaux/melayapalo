@@ -16,7 +16,7 @@ export default function WorkoutLibrary() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
           <div>
             <SectionPreamble eyebrow="Members Only" />
-            <h2 className="font-display text-void text-5xl font-bold leading-[1.15] pb-1">
+            <h2 className="display-heading font-display text-void text-5xl font-bold">
               Workout Library
             </h2>
           </div>

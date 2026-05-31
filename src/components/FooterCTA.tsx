@@ -9,7 +9,7 @@ export default function FooterCTA() {
           <div className="w-10 h-px bg-copper mb-12" />
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12">
             <div>
-              <h2 className="font-display text-ash text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] mb-5">
+              <h2 className="display-heading font-display text-ash text-5xl sm:text-6xl lg:text-7xl font-bold mb-5">
                 Ready to Start?<br />
                 <em className="italic text-copper">Let&apos;s Build.</em>
               </h2>

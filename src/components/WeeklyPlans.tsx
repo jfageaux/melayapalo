@@ -7,7 +7,7 @@ export default function WeeklyPlans() {
       <div className="max-w-7xl mx-auto">
         <div className="max-w-2xl mb-20">
           <SectionPreamble eyebrow="Structured Programming" />
-          <h2 className="font-display text-ash text-5xl sm:text-6xl font-bold leading-[1.15] pb-1 mb-6">
+          <h2 className="display-heading font-display text-ash text-5xl sm:text-6xl font-bold mb-6">
             Weekly Training Plans
           </h2>
           <p className="font-body text-ash/40 text-lg leading-relaxed">

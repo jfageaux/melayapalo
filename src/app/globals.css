@@ -37,3 +37,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.display-heading {
+  /* Cormorant has long descenders, so tight line boxes can clip letters like g, y, p, and q. */
+  line-height: 1.12;
+  padding-bottom: 0.08em;
+}

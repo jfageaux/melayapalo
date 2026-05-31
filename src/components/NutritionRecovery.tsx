@@ -9,7 +9,7 @@ export default function NutritionRecovery() {
           {nutritionTabs.map((tab) => (
             <div key={tab.label}>
               <SectionPreamble eyebrow="Members Content" />
-              <h2 className="font-display text-void text-4xl sm:text-5xl font-bold mb-10">{tab.label}</h2>
+              <h2 className="display-heading font-display text-void text-4xl sm:text-5xl font-bold mb-10">{tab.label}</h2>
               <ul className="space-y-0">
                 {tab.items.map((item) => (
                   <li
