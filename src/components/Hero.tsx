@@ -32,7 +32,7 @@ export default function Hero() {
           </p>
 
           <h1
-            className="font-display text-ash text-6xl sm:text-7xl lg:text-[5.5rem] font-bold leading-[1.0] mb-7 animate-rise"
+            className="font-display text-ash text-6xl sm:text-7xl lg:text-[5.5rem] font-bold leading-[1.0] pb-1 mb-7 animate-rise"
             style={{ animationDelay: "0.25s" }}
           >
             Perform<br />
