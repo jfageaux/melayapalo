@@ -1,18 +1,4 @@
-"use client";
-
-import { useEffect } from "react";
-
 export default function BookingSection() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    document.head.appendChild(script);
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
   return (
     <section id="booking" className="bg-ash py-28 px-6">
       <div className="max-w-4xl mx-auto">
@@ -28,10 +14,13 @@ export default function BookingSection() {
         </div>
 
         {/* Replace this with Melaya's Calendly URL later. */}
-        <div
-          className="calendly-inline-widget"
-          data-url="https://calendly.com/johnnyfageaux/new-meeting"
-          style={{ minWidth: "320px", height: "700px" }}
+        <iframe
+          src="https://calendly.com/johnnyfageaux/new-meeting?embed_domain=melayapalo.com&embed_type=Inline&hide_gdpr_banner=1"
+          width="100%"
+          height="700"
+          frameBorder="0"
+          title="Book a free consultation"
+          className="min-w-[320px]"
         />
       </div>
     </section>

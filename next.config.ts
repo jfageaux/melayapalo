@@ -16,11 +16,11 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' https://assets.calendly.com",
-      "style-src 'self' 'unsafe-inline' https://assets.calendly.com", // Next.js injects inline <style> for critical CSS
+      "script-src 'self'",
+      "style-src 'self' 'unsafe-inline'", // Next.js injects inline <style> for critical CSS
       "img-src 'self' data: https://*.calendly.com",
-      "font-src 'self' https://assets.calendly.com",
-      "connect-src 'self' https://*.calendly.com",
+      "font-src 'self'",
+      "connect-src 'self'",
       "frame-src https://calendly.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
