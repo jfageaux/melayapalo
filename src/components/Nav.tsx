@@ -30,16 +30,6 @@ export default function Nav() {
           >
             Home
           </Link>
-          <Link
-            href="/members"
-            className={`font-body text-xs tracking-[0.15em] uppercase transition-colors ${
-              pathname === "/members"
-                ? "text-copper"
-                : "text-dust hover:text-void"
-            }`}
-          >
-            Members
-          </Link>
           <a
             href="mailto:melayapalo@gmail.com?subject=Book a Consult"
             className="font-body text-xs tracking-[0.15em] uppercase bg-void text-ash px-6 py-2.5 hover:bg-copper transition-colors"
@@ -69,13 +59,6 @@ export default function Nav() {
             className="font-body text-xs tracking-[0.15em] uppercase text-void"
           >
             Home
-          </Link>
-          <Link
-            href="/members"
-            onClick={() => setMenuOpen(false)}
-            className="font-body text-xs tracking-[0.15em] uppercase text-void"
-          >
-            Members
           </Link>
           <a
             href="mailto:melayapalo@gmail.com?subject=Book a Consult"
