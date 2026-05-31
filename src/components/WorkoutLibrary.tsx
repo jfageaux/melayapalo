@@ -1,47 +1,7 @@
-const videos = [
-  {
-    title: "Fight Camp Day 1 — Foundation",
-    duration: "32 min",
-    difficulty: "Beginner",
-    category: "Conditioning",
-    desc: "Full-body foundation session to build your base. Shadowboxing, core, and footwork.",
-  },
-  {
-    title: "Upper Body Strength Block",
-    duration: "28 min",
-    difficulty: "Intermediate",
-    category: "Strength",
-    desc: "Shoulders, back, and arms with boxing-specific resistance training.",
-  },
-  {
-    title: "Footwork & Agility",
-    duration: "20 min",
-    difficulty: "All Levels",
-    category: "Skill",
-    desc: "Speed ladder, lateral movement, and defensive positioning drills.",
-  },
-  {
-    title: "Core Power Series — Week 2",
-    duration: "25 min",
-    difficulty: "Intermediate",
-    category: "Core",
-    desc: "Rotational power, anti-rotation stability, and fighter-specific core work.",
-  },
-  {
-    title: "Active Recovery & Mobility",
-    duration: "18 min",
-    difficulty: "All Levels",
-    category: "Recovery",
-    desc: "Hip flexors, thoracic spine, shoulder mobility — essential for fight camp longevity.",
-  },
-  {
-    title: "Mindset Reset — 10 Minutes",
-    duration: "10 min",
-    difficulty: "All Levels",
-    category: "Mindset",
-    desc: "Breathwork, intention-setting, and visualization before a hard training block.",
-  },
-];
+import SectionPreamble from "./SectionPreamble";
+import Cta from "./Cta";
+import { videos } from "@/lib/content";
+import { mailto } from "@/lib/email";
 
 const difficultyColor: Record<string, string> = {
   Beginner: "bg-copper/15 text-copper",
@@ -55,10 +15,7 @@ export default function WorkoutLibrary() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
           <div>
-            <div className="w-8 h-px bg-copper mb-6" />
-            <p className="font-body text-copper text-xs tracking-[0.2em] uppercase mb-3">
-              Members Only
-            </p>
+            <SectionPreamble eyebrow="Members Only" />
             <h2 className="font-display text-void text-5xl font-bold leading-[1.15] pb-1">
               Workout Library
             </h2>
@@ -71,7 +28,6 @@ export default function WorkoutLibrary() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {videos.map((v) => (
             <div key={v.title} className="group bg-fog/50 flex flex-col overflow-hidden">
-              {/* Video placeholder */}
               <div className="relative bg-void/8 aspect-video flex items-center justify-center">
                 <div className="w-14 h-14 border border-copper/40 flex items-center justify-center group-hover:border-copper group-hover:bg-copper/10 transition-colors">
                   <span className="text-copper text-lg ml-1">▶</span>
@@ -83,27 +39,18 @@ export default function WorkoutLibrary() {
 
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-2 mb-4">
-                  <span
-                    className={`font-body text-xs tracking-wide px-2 py-0.5 ${
-                      difficultyColor[v.difficulty] ?? "bg-dust/20 text-dust"
-                    }`}
-                  >
+                  <span className={`font-body text-xs tracking-wide px-2 py-0.5 ${difficultyColor[v.difficulty] ?? "bg-dust/20 text-dust"}`}>
                     {v.difficulty}
                   </span>
-                  <span className="font-body text-xs text-dust uppercase tracking-wider">
-                    {v.category}
-                  </span>
+                  <span className="font-body text-xs text-dust uppercase tracking-wider">{v.category}</span>
                 </div>
-                <h3 className="font-display text-void font-semibold text-xl mb-2 leading-snug">
-                  {v.title}
-                </h3>
+                <h3 className="font-display text-void font-semibold text-xl mb-2 leading-snug">{v.title}</h3>
                 <p className="font-body text-dust text-sm leading-relaxed flex-1">{v.desc}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Locked overlay hint */}
         <div className="mt-10 border border-void/10 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <div className="w-6 h-px bg-copper shrink-0 mt-1" />
           <div>
@@ -114,12 +61,9 @@ export default function WorkoutLibrary() {
               30+ videos and growing — fight camp sessions, skill work, recovery, and performance mindset.
             </p>
           </div>
-          <a
-            href="mailto:melayapalo@gmail.com?subject=Members Waitlist — Add Me"
-            className="sm:ml-auto shrink-0 inline-block bg-copper text-ash font-body text-xs tracking-[0.15em] uppercase px-6 py-3 hover:bg-rust transition-colors"
-          >
+          <Cta href={mailto("Members Waitlist — Add Me")} className="sm:ml-auto shrink-0 px-6 py-3">
             Join Waitlist
-          </a>
+          </Cta>
         </div>
       </div>
     </section>

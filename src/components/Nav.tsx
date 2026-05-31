@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { mailto } from "@/lib/email";
 
 export default function Nav() {
   const pathname = usePathname();
@@ -31,7 +32,7 @@ export default function Nav() {
             Home
           </Link>
           <a
-            href="mailto:melayapalo@gmail.com?subject=Book a Consult"
+            href={mailto("Book a Consult")}
             className="font-body text-xs tracking-[0.15em] uppercase bg-void text-ash px-6 py-2.5 hover:bg-copper transition-colors"
           >
             Book a Consult
@@ -61,7 +62,7 @@ export default function Nav() {
             Home
           </Link>
           <a
-            href="mailto:melayapalo@gmail.com?subject=Book a Consult"
+            href={mailto("Book a Consult")}
             onClick={() => setMenuOpen(false)}
             className="font-body text-xs tracking-[0.15em] uppercase bg-void text-ash px-6 py-4 text-center"
           >

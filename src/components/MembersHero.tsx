@@ -1,7 +1,9 @@
+import Cta from "./Cta";
+import { mailto } from "@/lib/email";
+
 export default function MembersHero() {
   return (
     <section className="bg-void pt-32 pb-24 px-6 relative overflow-hidden">
-      {/* Atmospheric background text */}
       <span
         aria-hidden
         className="absolute -right-8 bottom-0 font-display font-bold text-ash/[0.025] select-none pointer-events-none leading-none uppercase"
@@ -13,9 +15,7 @@ export default function MembersHero() {
       <div className="max-w-7xl mx-auto relative">
         <div className="inline-flex items-center gap-3 mb-10">
           <span className="w-1.5 h-1.5 bg-copper animate-pulse" />
-          <span className="font-body text-copper text-xs tracking-[0.2em] uppercase">
-            Coming Soon
-          </span>
+          <span className="font-body text-copper text-xs tracking-[0.2em] uppercase">Coming Soon</span>
         </div>
 
         <div className="w-10 h-px bg-copper mb-8" />
@@ -31,12 +31,9 @@ export default function MembersHero() {
           who take their performance seriously.
         </p>
 
-        <a
-          href="mailto:melayapalo@gmail.com?subject=Members Waitlist — Add Me"
-          className="inline-block bg-copper text-ash font-body text-xs tracking-[0.15em] uppercase px-10 py-4 hover:bg-rust transition-colors"
-        >
+        <Cta href={mailto("Members Waitlist — Add Me")} className="px-10">
           Join the Waitlist
-        </a>
+        </Cta>
       </div>
     </section>
   );

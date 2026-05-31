@@ -1,7 +1,9 @@
+import Cta from "./Cta";
+import { CONTACT_EMAIL, mailto } from "@/lib/email";
+
 export default function FooterCTA() {
   return (
     <footer className="bg-void">
-      {/* CTA band */}
       <div className="py-24 px-6 border-b border-ash/5">
         <div className="max-w-7xl mx-auto">
           <div className="w-10 h-px bg-copper mb-12" />
@@ -16,37 +18,28 @@ export default function FooterCTA() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-              <a
-                href="mailto:melayapalo@gmail.com?subject=Work%20with%20Melaya%20%E2%80%94%20Let%27s%20Talk"
-                className="inline-block bg-copper text-ash font-body text-xs tracking-[0.15em] uppercase px-10 py-4 text-center hover:bg-rust transition-colors"
-              >
+              <Cta href={mailto("Work with Melaya — Let's Talk")} className="px-10">
                 Work with Melaya
-              </a>
-              <a
-                href="mailto:melayapalo@gmail.com?subject=Book a Consult"
-                className="inline-block border border-ash/20 text-ash font-body text-xs tracking-[0.15em] uppercase px-10 py-4 text-center hover:border-ash/40 transition-colors"
-              >
+              </Cta>
+              <Cta variant="ghost" href={mailto("Book a Consult")} className="px-10">
                 Book a Consult
-              </a>
+              </Cta>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Footer bottom */}
       <div className="py-8 px-6">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="font-display text-ash/20 text-sm tracking-[0.2em] uppercase">
-            Melaya Palo
-          </span>
+          <span className="font-display text-ash/20 text-sm tracking-[0.2em] uppercase">Melaya Palo</span>
           <p className="font-body text-ash/15 text-xs">
             © {new Date().getFullYear()} Melaya Palo. All rights reserved.
           </p>
           <a
-            href="mailto:melayapalo@gmail.com"
+            href={`mailto:${CONTACT_EMAIL}`}
             className="font-body text-ash/20 text-xs hover:text-ash/50 transition-colors"
           >
-            melayapalo@gmail.com
+            {CONTACT_EMAIL}
           </a>
         </div>
       </div>
