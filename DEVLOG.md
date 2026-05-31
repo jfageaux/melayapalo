@@ -2,6 +2,23 @@
 
 ---
 
+## 2026-05-30 — Calendly Booking Section
+
+**What changed:**
+- Added `BookingSection` component with Calendly inline embed (`https://calendly.com/johnnyfageaux/new-meeting`)
+- Loads Calendly widget via `next/script` with `strategy="lazyOnload"` — no backend, no auth, free plan only
+- Section placed after Pricing on the homepage with cream/ash background, matching Desert Neutral style
+- Hero CTAs updated: primary CTA is now "Book a Free Consultation" linking to `#booking`; secondary CTA is "Work with Melaya" mailto
+- CSP in `next.config.ts` updated to permit Calendly: `script-src`, `style-src`, `img-src`, `font-src`, `connect-src`, and `frame-src` extended with `*.calendly.com` / `assets.calendly.com`
+
+**Files touched:**
+- `src/components/BookingSection.tsx` — new component
+- `src/components/Hero.tsx` — swapped CTA order and labels
+- `src/app/page.tsx` — added `<BookingSection />` after `<Pricing />`
+- `next.config.ts` — loosened CSP for Calendly domains
+
+---
+
 ## 2026-05-28 — Initial Build
 
 **What changed:**
