@@ -147,7 +147,7 @@ export const mindsetLessons: MindsetLesson[] = [
   {
     number: "02",
     title: "Resilience Is a Practice",
-    desc: "Resilience isn't a personality trait — it's something you train. Learn the daily rituals that build it.",
+    desc: "Resilience isn’t a personality trait — it’s something you train. Learn the daily rituals that build it.",
   },
   {
     number: "03",

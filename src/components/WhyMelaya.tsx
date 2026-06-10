@@ -3,7 +3,7 @@ import { credentials } from "@/lib/content";
 
 export default function WhyMelaya() {
   return (
-    <section className="bg-void px-8 sm:px-12 lg:px-16 py-24 lg:py-32">
+    <section className="bg-void border-t border-ash/[0.06] px-6 sm:px-12 lg:px-16 py-24 lg:py-32">
       <div className="max-w-4xl mx-auto">
         <div className="mb-16">
           <SectionPreamble eyebrow="Credentials" />
@@ -19,7 +19,7 @@ export default function WhyMelaya() {
               key={label}
               className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-4 py-6"
             >
-              <span className="font-display text-ash text-2xl sm:text-3xl font-bold">{label}</span>
+              <span className="font-display text-ash text-2xl sm:text-3xl font-bold lining-nums">{label}</span>
               <span className="font-body text-dust text-sm tracking-[0.12em] uppercase">{detail}</span>
             </li>
           ))}

@@ -10,11 +10,17 @@
   to { opacity: 1; }
 }
 
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @theme {
   --color-void: #130F0C;
   --color-ash: #F5F0E8;
   --color-fog: #DDD5C8;
   --color-dust: #9E8E7E;
+  --color-dust-ink: #645747;
   --color-copper: #C07038;
   --color-rust: #7A3020;
   --color-smoke: #2C2219;
@@ -22,8 +28,12 @@
   --font-display: var(--font-cormorant), "Georgia", serif;
   --font-body: var(--font-syne), system-ui, sans-serif;
 
-  --animate-rise: rise 0.8s ease both;
+  --default-transition-duration: 300ms;
+  --default-transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-rise: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
   --animate-fade: fade 0.6s ease both;
+  --animate-menu: menu-in 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 html {
@@ -42,4 +52,33 @@ body {
   /* Cormorant has long descenders, so tight line boxes can clip letters like g, y, p, and q. */
   line-height: 1.12;
   padding-bottom: 0.08em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-rust);
+  outline-offset: 3px;
+}
+
+.bg-void :focus-visible,
+.bg-rust :focus-visible,
+.bg-copper :focus-visible,
+.bg-smoke :focus-visible {
+  outline-color: var(--color-ash);
+}
+
+::selection {
+  background-color: var(--color-copper);
+  color: var(--color-void);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-rise,
+  .animate-fade,
+  .animate-menu,
+  .animate-pulse {
+    animation: none !important;
+  }
 }
