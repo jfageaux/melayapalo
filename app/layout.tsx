@@ -23,7 +23,7 @@ const DESCRIPTION =
   "Personal training, fight camp programming, and virtual nutrition coaching with Melaya Palo. Built for athletes who want structure, intensity, and real results.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://melayapalo.vercel.app"),
+  metadataBase: new URL("https://melayapalo.com"),
   title: "Melaya Palo | Perform with Resilience",
   description: DESCRIPTION,
   openGraph: {
